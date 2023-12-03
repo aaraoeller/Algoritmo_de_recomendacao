@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações de Filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="movie-recommendations">
+        {% for recommendation in recommendations %}
+            <div class="movie-card">
+                <div class="movie-title">{{ recommendation.title }}</div>
+                <div class="movie-description">{{ recommendation.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
